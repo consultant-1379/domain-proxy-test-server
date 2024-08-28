@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/cbsd-domain-coordinator-app/services/topology-operator/groups/topology"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"message\":\"Groups have been added\"}",
+    "fixedDelayMilliseconds": 200
+  }
+}

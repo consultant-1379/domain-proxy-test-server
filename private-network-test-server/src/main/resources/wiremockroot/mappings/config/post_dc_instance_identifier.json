@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/cbsd-domain-coordinator-app/services/config"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"sasDomainProxy_dcInstanceIdentifier\":\"true\"}",
+    "fixedDelayMilliseconds": 200
+  }
+}

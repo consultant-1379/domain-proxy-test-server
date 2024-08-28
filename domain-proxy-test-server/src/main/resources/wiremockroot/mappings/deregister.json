@@ -1,0 +1,21 @@
+{
+   "id" : "e558b9d6-2c80-4f48-935b-d13753472031",
+   "request":{
+      "method":"POST",
+      "url":"/v1.2/deregistration",
+      "headers":{
+         "Content-Type":{
+            "equalTo":"application/json"
+         }
+      }
+   },
+   "response":{
+      "status":201,
+	  "headers": {
+            "Content-Type": "application/json"
+      },
+      "transformers":[
+         "deregistration-body-transformer"
+      ]
+   }
+}

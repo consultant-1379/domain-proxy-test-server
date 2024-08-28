@@ -1,0 +1,255 @@
+netconf:
+  ipRange: "192.168.100.0-192.168.106.249"
+  portRange: "6513"
+  #ipAddrPath: "/netsim/ipaddr_ip4.txt"
+  tlsSecurityDefinition:
+    alias: "server-security"
+    keyPath: "/netsim/netsimdir/LTE20-Q3-V3x2-1.8K-DG2-TDD-LTE40/security/LTE20Q3V3x218KDG2TDDLTE40/s_key.pem"
+    certificatePath: "/netsim/netsimdir/LTE20-Q3-V3x2-1.8K-DG2-TDD-LTE40/security/LTE20Q3V3x218KDG2TDDLTE40/s_cert.pem"
+  trustedCertificate:
+    alias: "client-certificate"
+    certificatePath: "/netsim/c_ca.pem"
+
+nodes:
+  - name: "LTE40dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/ERBS18Q3"
+    cbsdSerials:
+      - TD3T428820${repeat}
+      - D827120515${repeat}
+
+#NR Node configuration
+  - name: "NRGNB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4408_NR_21Q4_R41A14"
+    cbsdSerials:
+      - CF88300407${repeat}
+
+#Mixed mode node configuration
+  - name: "MIXEDMODEdg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/MIXED_MODE_LTE_NR_21Q4"
+    cbsdSerials:
+      - MM3T428820${repeat}
+      - DMM7120515${repeat}
+
+  - name: "LTE41dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_DOT_LTE_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213277${repeat}
+
+  - name: "LTE42dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4469_DOT_LTE_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213284${repeat}
+
+  - name: "LTE43dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_Multiple_DOTS_LTE_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213201${repeat}
+      - TD3W213202${repeat}
+      - TD3W213203${repeat}
+      - TD3W213204${repeat}
+      - TD3W213205${repeat}
+      - TD3W213206${repeat}
+      - TD3W213207${repeat}
+      - TD3W213208${repeat}
+
+#New RadioDot NR
+  - name: "NR02gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_DOT_NR_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213278${repeat}
+
+  - name: "NR03gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4469_DOT_NR_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213285${repeat}
+
+  - name: "LTE44dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/3268_B48_LTE_21Q1_R21A44"
+    cbsdSerials:
+      - EA8B129477${repeat}
+
+  - name: "NR05gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/3268_NR_23Q1_R68A25"
+    cbsdSerials:
+      - E23E345115${repeat}
+
+  - name: "MIXEDMODE02dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/3268_MIXED_MODE_2LTE_2NR_23Q1_R68A25"
+    cbsdSerials:
+      - E23E145001${repeat}
+      - EA8B139487${repeat}
+
+  - name: "LTE49dg2ERBS${repeat}"
+    repeat: 2
+    latencyMillis: 300
+    dataTemplate: "netconf/2256_DOT_LTE_23Q1_R21A44_1_CELL"
+    cbsdSerials:
+      - TD4W213201${repeat}
+      - TD4W213202${repeat}
+      - TD4W213203${repeat}
+      - TD4W213204${repeat}
+      - TD4W213205${repeat}
+      - TD4W213206${repeat}
+      - TD4W213207${repeat}
+      - TD4W213208${repeat}
+
+  - name: "LTE50dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/2256_DOT_LTE_23Q1_R21A44_2_CELL"
+    cbsdSerials:
+      - TD4W213401${repeat}
+      - TD4W213402${repeat}
+      - TD4W213403${repeat}
+      - TD4W213404${repeat}
+      - TD4W213405${repeat}
+      - TD4W213406${repeat}
+      - TD4W213407${repeat}
+      - TD4W213408${repeat}
+
+  - name: "LTE51dg2ERBS${repeat}"
+    repeat: 2
+    latencyMillis: 300
+    dataTemplate: "netconf/2266_DOT_LTE_23Q1_R21A44_3_CELL"
+    cbsdSerials:
+      - TD5W213301${repeat}
+      - TD5W213302${repeat}
+      - TD5W213303${repeat}
+      - TD5W213304${repeat}
+      - TD5W213305${repeat}
+      - TD5W213306${repeat}
+      - TD5W213307${repeat}
+      - TD5W213308${repeat}
+
+  - name: "LTE52dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/2256_DOT_LTE_23Q1_R21A44_5_CELL"
+    cbsdSerials:
+      - TD4W213501${repeat}
+      - TD4W213502${repeat}
+      - TD4W213503${repeat}
+      - TD4W213504${repeat}
+      - TD4W213505${repeat}
+      - TD4W213506${repeat}
+      - TD4W213507${repeat}
+      - TD4W213508${repeat}
+
+  - name: "NR17gNodeBRadio${repeat}"
+    repeat: 2
+    latencyMillis: 300
+    dataTemplate: "netconf/2256_NR_23Q1_R2"
+    cbsdSerials:
+      - TD3W170201${repeat}
+      - TD3W170202${repeat}
+      - TD3W170203${repeat}
+      - TD3W170204${repeat}
+      - TD3W170205${repeat}
+      - TD3W170206${repeat}
+      - TD3W170207${repeat}
+      - TD3W170208${repeat}
+
+  - name: "NR18gNodeBRadio${repeat}"
+    repeat: 2
+    latencyMillis: 300
+    dataTemplate: "netconf/2266_NR_23Q1_R2"
+    cbsdSerials:
+      - TD3W170301${repeat}
+      - TD3W170302${repeat}
+      - TD3W170303${repeat}
+      - TD3W170304${repeat}
+      - TD3W170305${repeat}
+      - TD3W170306${repeat}
+      - TD3W170307${repeat}
+      - TD3W170308${repeat}
+
+  - name: "MIXEDMODE04dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/2256_MIXED_MODE_2LTE_2NR_23Q1_8DOTS_R21A44"
+    cbsdSerials:
+      - TD3W160501${repeat}
+      - TD3W160502${repeat}
+      - TD3W160503${repeat}
+      - TD3W160504${repeat}
+      - TD3W160505${repeat}
+      - TD3W160506${repeat}
+      - TD3W160507${repeat}
+      - TD3W160508${repeat}
+
+  - name: "MIXEDMODE05dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/2266_MIXED_MODE_2LTE_2NR_23Q1_8DOTS_R21A44"
+    cbsdSerials:
+      - TD3W160601${repeat}
+      - TD3W160602${repeat}
+      - TD3W160603${repeat}
+      - TD3W160604${repeat}
+      - TD3W160605${repeat}
+      - TD3W160606${repeat}
+      - TD3W160607${repeat}
+      - TD3W160608${repeat}
+
+  - name: "MIXEDMODE05dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/2266_MIXED_MODE_2LTE_2NR_23Q1_8DOTS_R21A44"
+    cbsdSerials:
+      - TD3W160601${repeat}
+      - TD3W160602${repeat}
+      - TD3W160603${repeat}
+      - TD3W160604${repeat}
+      - TD3W160605${repeat}
+      - TD3W160606${repeat}
+      - TD3W160607${repeat}
+      - TD3W160608${repeat}
+
+  - name: "NR19gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/1672_NR_23Q4"
+    cbsdSerials:
+      - EA8B856000${repeat}
+
+reports:
+  - reportClass: com.ericsson.oss.services.domainproxy.test.server.testevent.reports.LoggerReport
+  - reportClass: com.ericsson.oss.services.domainproxy.test.server.testevent.reports.PrometheusReport
+    initParameters:
+      scrape_port: "9920"
+
+sasConfig:
+  httpPort: 9919
+  httpsPort: 9921
+  keystorePath: "/netsim/sas-valid-server-certificate.jks"
+  keystorePassword: "3ric550N"
+  keystoreType: "JKS"
+  trustStorePath: "/netsim/sas-truststore.jks"
+  trustStorePassword: "3ric550N"
+  needClientAuth: true
+  cipherSuites: ["TLS_RSA_WITH_AES_128_GCM_SHA256", "TLS_RSA_WITH_AES_256_GCM_SHA384", "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256", "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384", "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"]
+  disableRequestJournal: true
+  jettyAcceptorsThreads: 2
+  jettyContainerThreads: 20

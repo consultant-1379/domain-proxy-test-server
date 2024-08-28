@@ -1,0 +1,34 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/relinquishment",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 201,
+              "responseMessage": "response Message Relinquishment 201",
+              "responseData": [ "response Message Relinquishment 201-0", "response Message Relinquishment 201-1" ]
+            }
+          }
+        }
+      ]
+    },
+    "transformers":[
+      "response-template",
+      "relinquishment-body-transformer"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "e558b9d6-2c80-4f48-935b-d13753472031",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/relinquishment",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 107,
+              "responseMessage": "response Message Relinquishment 177",
+              "responseData": [ "response Message Relinquishment 177-0", "response Message Relinquishment 177-1" ]
+            }
+          }
+        }
+      ]
+    },
+    "transformers":[
+      "response-template",
+      "relinquishment-body-transformer"
+    ]
+  }
+}

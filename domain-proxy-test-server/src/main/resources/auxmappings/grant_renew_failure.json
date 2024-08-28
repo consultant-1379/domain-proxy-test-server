@@ -1,0 +1,41 @@
+{
+  "request":{
+    "method":"POST",
+    "url":"/v1.2/heartbeat",
+    "headers":{
+      "Content-Type":{
+        "equalTo":"application/json"
+      }
+    }
+  },
+  "response":{
+    "status":201,
+    "headers":{
+      "Content-Type":"application/json"
+    },
+    "transformerParameters":{
+      "ResponseFillerParameter":[
+        {
+          "fieldAndValue":{
+            "transmitExpireTime":"{{now offset='20 seconds'}}"
+          }
+        },
+        {
+          "fieldAndValue":{
+            "grantExpireTime":"{{now offset='10 minutes'}}"
+          }
+        },
+        {
+          "identifier":"\"grantRenew\":true",
+          "fieldAndValue":{
+            "grantExpireTime":0
+          }
+        }
+      ]
+    },
+    "transformers":[
+      "heartbeat-body-transformer",
+      "response-template"
+    ]
+  }
+}

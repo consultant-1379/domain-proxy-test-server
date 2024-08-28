@@ -1,0 +1,21 @@
+{
+   "id" : "35c2b8f8-3c5a-4a13-9a28-12bc8e2220fd",
+   "request":{
+      "method":"POST",
+      "url":"/v1.2/relinquishment",
+      "headers":{
+         "Content-Type":{
+            "equalTo":"application/json"
+         }
+      }
+   },
+   "response":{
+      "status":201,
+	  "headers": {
+            "Content-Type": "application/json"
+      },
+      "transformers":[
+         "relinquishment-body-transformer"
+      ]
+   }
+}

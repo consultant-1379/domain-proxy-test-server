@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/cbsd-domain-coordinator-app/services/sas/node-properties/([a-zA-Z0-9,=]*)"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"sasRegistrationId\":\"SAS-1621001020769\"}",
+    "fixedDelayMilliseconds": 200
+  }
+}

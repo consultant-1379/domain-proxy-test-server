@@ -1,0 +1,21 @@
+{
+  "id" : "56b0341d-f2e8-4f2f-95b4-b1009ea63bf1",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/registration",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": [
+      "registration-body-transformer"
+    ]
+  }
+}

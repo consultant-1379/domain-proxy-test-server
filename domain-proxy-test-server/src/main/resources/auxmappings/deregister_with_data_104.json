@@ -1,0 +1,34 @@
+{
+   "id" : "e558b9d6-2c80-4f48-935b-d13753472031",
+   "request":{
+      "method":"POST",
+      "url":"/v1.2/deregistration",
+      "headers":{
+         "Content-Type":{
+            "equalTo":"application/json"
+         }
+      }
+   },
+   "response":{
+      "status":201,
+	  "headers": {
+            "Content-Type": "application/json"
+      },
+      "transformerParameters": {
+         "ResponseFillerParameter": [
+            {
+               "fieldAndValue": {
+                  "response": {
+                     "responseCode": 104,
+                     "responseMessage": "response Message Deregistration 104",
+                     "responseData": [ "response Message Deregistration 104-0", "response Message Deregistration 104-1" ]
+                  }
+               }
+            }
+         ]
+      },
+      "transformers":[
+         "deregistration-body-transformer"
+      ]
+   }
+}

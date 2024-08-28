@@ -1,0 +1,35 @@
+{
+  "id": "0017d5de-e09b-4990-a2c0-1884c9f08196",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/spectrumInquiry",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+  "transformerParameters": {
+         "ResponseFillerParameter": [
+            {
+               "fieldAndValue": {
+                  "response": {
+                     "responseCode": 102,
+                     "responseMessage": "response Message Spectrum Inquiry 102",
+                     "responseData": [ "response Message Spectrum Inquiry 102-0", "response Message Spectrum Inquiry 102-1" ]
+                  }
+               }
+            }
+         ]
+      },
+    "transformers": [
+      "response-template",
+      "spectrum-inquiry-body-transformer"
+    ]
+  }
+}

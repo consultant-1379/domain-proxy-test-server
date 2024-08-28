@@ -1,0 +1,37 @@
+{
+  "id": "16c34fb3-a602-4824-9ac2-21397591980b",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/grant",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 103,
+              "responseMessage": "INVALID_VALUE",
+              "responseData": [
+                "operationParam"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "response-template",
+      "grant-body-transformer"
+    ]
+  }
+}

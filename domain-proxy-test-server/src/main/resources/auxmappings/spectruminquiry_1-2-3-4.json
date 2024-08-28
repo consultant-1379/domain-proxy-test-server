@@ -1,0 +1,61 @@
+{
+  "id": "0017d5de-e09b-4990-a2c0-1884c9f08196",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/spectrumInquiry",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": {
+        "fieldAndValue": {
+          "availableChannel": [
+            {
+              "frequencyRange": {
+                "lowFrequency": 3550000000,
+                "highFrequency": 3560000000
+              },
+              "channelType": "GAA",
+              "ruleApplied": "FCC Part 96"
+            },
+            {
+              "frequencyRange": {
+                "lowFrequency": 3560000000,
+                "highFrequency": 3570000000
+              },
+              "channelType": "GAA",
+              "ruleApplied": "FCC Part 96"
+            },
+            {
+              "frequencyRange": {
+                "lowFrequency": 3570000000,
+                "highFrequency": 3580000000
+              },
+              "channelType": "GAA",
+              "ruleApplied": "FCC Part 96"
+            },
+            {
+              "frequencyRange": {
+                "lowFrequency": 3580000000,
+                "highFrequency": 3590000000
+              },
+              "channelType": "GAA",
+              "ruleApplied": "FCC Part 96"
+            }
+          ]
+        }
+      }
+    },
+    "transformers": [
+      "spectrum-inquiry-body-transformer"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+# Compiled source #
+*.class
+*/bin/*
+
+# Eclipse files
+.project
+.classpath
+.settings
+.metadata
+
+# IntelliJ
+.idea
+*.iws
+*.ipr
+*.iml
+
+# Packages
+*.jar
+*.war
+*.ear
+
+# Maven build files
+target
+reports
+.pmd
+
+#Generated files
+*.ser
+
+# Merge files
+*.orig
+
+# Log files
+*.log
+
+# backup files
+*~
+*.versionsBackup
+*.swp
+*.bak
+
+# TAF output
+test-output/
+tmp/
+
+# Checkstyle files
+*.checkstyle
+
+# Windows binaries
+*.dll
+*.exe
+

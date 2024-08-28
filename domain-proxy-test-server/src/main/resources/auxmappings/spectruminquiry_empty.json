@@ -1,0 +1,31 @@
+{
+  "id": "0017d5de-e09b-4990-a2c0-1884c9f08196",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/spectrumInquiry",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "availableChannel": []
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "response-template",
+      "spectrum-inquiry-body-transformer"
+    ]
+  }
+}

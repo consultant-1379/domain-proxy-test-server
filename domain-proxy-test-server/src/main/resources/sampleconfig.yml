@@ -1,0 +1,141 @@
+netconf:
+  #ipRange: "192.168.100.0-192.168.101.127"
+  ipRange: "127.0.0.1"
+  portRange: "6513-6600"
+  tlsSecurityDefinition:
+    alias: "server-security"
+    keyPath: "src/main/resources/netconf/tlsnetconf.key"
+    certificatePath: "src/main/resources/netconf/tlsnetconf.cert"
+  trustedCertificate:
+    alias: "client-certificate"
+    certificatePath: "src/main/resources/netconf/c_cacert.pem"
+
+nodes:
+  - name: "NRGNB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4408_NR_21Q4_R41A14"
+    cbsdSerials:
+      - CF88300407${repeat}
+
+  - name: "NR02gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_DOT_NR_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213279${repeat}
+
+  - name: "NR03gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4469_DOT_NR_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213286${repeat}
+
+  - name: "LTE40dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 2000
+    dataTemplate: "netconf/ERBS18Q3"
+    cbsdSerials:
+      - TD3T428820${repeat}
+      - D827120515${repeat}
+
+  - name: "LTE41dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_DOT_LTE_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213277${repeat}
+
+  - name: "LTE42dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4469_DOT_LTE_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213284${repeat}
+
+  - name: "LTE43dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_Multiple_DOTS_LTE_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213201${repeat}
+      - TD3W213202${repeat}
+      - TD3W213203${repeat}
+      - TD3W213204${repeat}
+      - TD3W213205${repeat}
+      - TD3W213206${repeat}
+      - TD3W213207${repeat}
+      - TD3W213208${repeat}
+
+  - name: "NR04gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4469_8_DOTS_1_NR_CELL_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213211${repeat}
+      - TD3W213212${repeat}
+      - TD3W213213${repeat}
+      - TD3W213214${repeat}
+      - TD3W213215${repeat}
+      - TD3W213216${repeat}
+      - TD3W213217${repeat}
+      - TD3W213218${repeat}
+
+  - name: "MIXEDMODE01gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4469_MIXED_MODE_2NR_2LTE_8_DOTS_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213221${repeat}
+      - TD3W213222${repeat}
+      - TD3W213223${repeat}
+      - TD3W213224${repeat}
+      - TD3W213225${repeat}
+      - TD3W213226${repeat}
+      - TD3W213227${repeat}
+      - TD3W213228${repeat}
+
+  - name: "MIXEDMODE02gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/4459_MIXED_MODE_2NR_2LTE_8_DOTS_22Q2_R49A34"
+    cbsdSerials:
+      - TD3W213231${repeat}
+      - TD3W213232${repeat}
+      - TD3W213233${repeat}
+      - TD3W213234${repeat}
+      - TD3W213235${repeat}
+      - TD3W213236${repeat}
+      - TD3W213237${repeat}
+      - TD3W213238${repeat}
+
+  - name: "LTE44dg2ERBS${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/3268_B48_LTE_21Q1_R21A44"
+    cbsdSerials:
+      - EA8B129477${repeat}
+
+  - name: "NR05gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/3268_NR_23Q1_R68A25"
+    cbsdSerials:
+      - E23E345115${repeat}
+
+  - name: "NR19gNodeB${repeat}"
+    repeat: 1
+    latencyMillis: 300
+    dataTemplate: "netconf/1672_NR_23Q4"
+    cbsdSerials:
+      - EA8B856000${repeat}
+
+reports:
+  - reportClass: com.ericsson.oss.services.domainproxy.test.server.testevent.reports.LoggerReport
+  - reportClass: com.ericsson.oss.services.domainproxy.test.server.testevent.reports.PrometheusReport
+    initParameters:
+      scrape_port: "8090"
+
+sasConfig:
+  httpPort: 9919

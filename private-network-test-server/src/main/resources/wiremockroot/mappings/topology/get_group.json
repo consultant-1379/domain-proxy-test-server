@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/cbsd-domain-coordinator-app/services/topology-operator/groups/.*:.*"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"grants\":\"[CellCbsdGrant(cellFdn=ManagedElement=LTE40dg2ERBS00002,ENodeBFunction=1,EUtranCellTDD=LTE40dg2ERBS00002-3,cbsdId=sas1/cbsd273,operationState=AUTHORIZED,channelType=GAA,maxEirp=36.98,frequency=3590-3600MHz,grantId=sas1/grant10293,grantExpireTime=2021-03-10T14:34:08Z,txExpireTime=2021-02-24T17:17:02Z,heartbeatInterval=60sec),CellCbsdGrant(cellFdn=ManagedElement=LTE40dg2ERBS00002,ENodeBFunction=1,EUtranCellTDD=LTE40dg2ERBS00002-3,cbsdId=sas1/cbsd273,operationState=AUTHORIZED,channelType=GAA,maxEirp=36.98,frequency=3600-3610MHz,grantId=sas1/grant10298,grantExpireTime=2021-03-10T14:34:08Z,txExpireTime=2021-02-24T17:17:02Z,heartbeatInterval=60sec),CellCbsdGrant(cellFdn=ManagedElement=LTE40dg2ERBS00002,ENodeBFunction=1,EUtranCellTDD=LTE40dg2ERBS00002-1,cbsdId=sas1/cbsd273,operationState=AUTHORIZED,channelType=GAA,maxEirp=36.98,frequency=3560-3570MHz,grantId=sas1/grant10301,grantExpireTime=2021-03-10T14:34:08Z,txExpireTime=2021-02-24T17:17:02Z,heartbeatInterval=60sec)]\",\"unallocatedGrants\":\"[CellCbsdGrant(cellFdn=,cbsdId=sas1/cbsd273,operationState=AUTHORIZED,channelType=GAA,maxEirp=36.98,frequency=3680-3690MHz,grantId=sas1/grant10295,grantExpireTime=2021-03-10T14:34:08Z,txExpireTime=2021-02-24T17:17:02Z,heartbeatInterval=60sec),CellCbsdGrant(cellFdn=,cbsdId=sas1/cbsd273,operationState=AUTHORIZED,channelType=GAA,maxEirp=36.98,frequency=3670-3680MHz,grantId=sas1/grant10296,grantExpireTime=2021-03-10T14:34:08Z,txExpireTime=2021-02-24T17:17:02Z,heartbeatInterval=60sec),CellCbsdGrant(cellFdn=,cbsdId=sas1/cbsd273,operationState=AUTHORIZED,channelType=GAA,maxEirp=36.98,frequency=3630-3640MHz,grantId=sas1/grant10302,grantExpireTime=2021-03-10T14:34:08Z,txExpireTime=2021-02-24T17:17:02Z,heartbeatInterval=60sec)]\"}",
+    "fixedDelayMilliseconds": 200
+  }
+}

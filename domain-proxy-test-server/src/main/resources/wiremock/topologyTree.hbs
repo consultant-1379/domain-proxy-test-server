@@ -1,0 +1,163 @@
+{{#partial "title"}} Topology {{/partial}}
+{{#partial "inhead"}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        ul, #root {
+            list-style-type: none;
+        }
+
+        #root {
+            margin: 0;
+            padding: 0;
+        }
+
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: all; /* Safari 3.1+ */
+            -moz-user-select: all; /* Firefox 2+ */
+            -ms-user-select: all; /* IE 10+ */
+            user-select: all;
+        }
+
+        .caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .caret-down::before {
+            content: "\25BC";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+            /*-ms-transform: rotate(90deg); !* IE 9 *!*/
+            /*-webkit-transform: rotate(90deg); !* Safari *!'*/
+            /*transform: rotate(90deg);*/
+        }
+
+        .nested {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .state-STARTED {
+            color: green;
+        }
+
+        .state-STOPPED {
+            color: darkred;
+        }
+
+        .trasmitting-true {
+            color: black;
+        }
+
+        .trasmitting-false {
+            color: darkred;
+        }
+    </style>
+{{/partial}}
+{{#partial "content"}}
+    <ul id="root">
+        {{#nodes}}
+            <li><span class="caret caret-down">{{name}}</span>
+                <ul class="nested active">
+                    <li>Address: {{address}}</li>
+                    <li>Port: {{port}}</li>
+                    <li>State: <span class="state-{{state}}">{{state}}</span>
+                        {{#if manageable}}
+                            <span>
+                                <form action="/__admin/cbrs/topology-tree/node/{{name}}" method="post" style="display: inline">
+                                {{#if started}}
+                                    <input type="submit" name="action" value="stop">
+                                {{else}}
+                                    <input type="submit" name="action" value="start">
+                                {{/if}}
+                                </form>
+                            </span>
+                        {{/if}}
+                        {{remarks}}
+                    </li>
+                    <li>Latency:
+                        <form action="/__admin/cbrs/topology-tree/node/{{name}}" method="post" style="display: inline">
+                        <input type="text" name="latency" value="{{latencyMillis}}" size="6" style="text-align: right"> milliseconds
+                        </form>
+                    </li>
+                    <li><span class="caret caret-down">Cells</span>
+                        <ul class="nested active">
+                            {{#cells}}
+                                <li><span class="caret trasmitting-{{and transmitting ../started}}">{{cellId}}</span>
+                                    <ul class="nested">
+                                        {{#if (eq technologyType "NR") }}
+                                            {{#contains cellId "NRCellDU" }}
+                                                <li>SsbFrequency: {{ssbFrequency}} Hz</li>
+                                                <li>SsbFrequencyAutoSelected: {{ssbFrequencyAutoSelected}} Hz</li>
+                                            {{else}}
+                                                <li>Arfcn DL: {{arfcnDL}}</li>
+                                                <li>Arfcn UL: {{arfcnUL}}</li>
+                                                <li>Channel bandwidth DL: {{bSChannelBwDL}} Hz</li>
+                                                <li>Channel bandwidth UL: {{bSChannelBwUL}} Hz</li>
+                                                <li>ConfiguredMaxTxPower: {{configuredMaxTxPower}} </li>
+                                                <li>Frequency range: {{frequencyRangeHz.frequencyStart}} - {{frequencyRangeHz.frequencyEnd}} Hz</li>
+                                                <li>TX expiration: {{txExpirationTime}}</li>
+                                                <li><span class="caret">CBSDs</span>
+                                                    <ul class="nested">
+                                                        {{#cbsds}}
+                                                            <li>{{cbsdSeria}}
+                                                                <ul>
+                                                                    <li>Id: {{cbsdId}}</li>
+                                                                    <li>State: {{state}}</li>
+                                                                    <li>Number of grants: {{grantCount}}</li>
+                                                                </ul>
+                                                            </li>
+                                                        {{/cbsds}}
+                                                    </ul>
+                                                </li>
+                                            {{/contains}}
+                                        {{else}}
+                                            <li>Earfcn: {{earfcn}}</li>
+                                            <li>Channel bandwidth: {{channelBandwidthHz}} Hz</li>
+                                            <li>Frequency range: {{frequencyRangeHz.frequencyStart}} - {{frequencyRangeHz.frequencyEnd}} Hz</li>
+                                            <li>TX expiration: {{txExpirationTime}}</li>
+                                            <li><span class="caret">CBSDs</span>
+                                                <ul class="nested">
+                                                    {{#cbsds}}
+                                                        <li>{{cbsdSeria}}
+                                                            <ul>
+                                                                <li>Id: {{cbsdId}}</li>
+                                                                <li>State: {{state}}</li>
+                                                                <li>Number of grants: {{grantCount}}</li>
+                                                            </ul>
+                                                        </li>
+                                                    {{/cbsds}}
+                                                </ul>
+                                            </li>
+                                        {{/if}}
+                                    </ul>
+                                </li>
+                            {{/cells}}
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        {{/nodes}}
+    </ul>
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+{{/partial}}
+{{> wiremock/base}}

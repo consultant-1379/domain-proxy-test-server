@@ -1,0 +1,2 @@
+ipRange: "<insert available IP range>" # sample IP range: 192.168.100.1-192.168.101.44
+verboseLogging: false # set to true to enable verbose Wiremock logging, including logging REST requests and responses

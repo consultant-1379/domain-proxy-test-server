@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/cbsd-domain-coordinator-app/services/topology-operator/groups/all"
+  },
+  "response": {
+    "status": 202,
+    "body": "{\"message\":\"Deletion has started\"}",
+    "fixedDelayMilliseconds": 200
+  }
+}

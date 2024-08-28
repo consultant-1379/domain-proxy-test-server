@@ -1,0 +1,50 @@
+{
+  "id": "16c34fb3-a602-4824-9ac2-21397591980b",
+  "request": {
+    "method": "POST",
+    "urlPath": "/v1.2/grant",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "grantExpireTime": "{{now offset='20000 minutes'}}"
+          }
+        },
+        {
+          "fieldAndValue": {
+            "measReportConfig": [
+              "RECEIVED_POWER_WITH_GRANT"
+            ]
+          }
+        },
+        {
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 0,
+              "responseMessage": "response Message grant",
+              "responseData": [
+                "response Message grant-0",
+                "response Message grant-1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "response-template",
+      "grant-body-transformer"
+    ]
+  }
+}

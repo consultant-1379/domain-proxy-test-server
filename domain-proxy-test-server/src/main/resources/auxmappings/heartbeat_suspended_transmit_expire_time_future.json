@@ -1,0 +1,40 @@
+{
+  "id": "e77af031-ffe7-4134-a9f5-0c1d3b2af8dd",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/heartbeat",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "transmitExpireTime": "{{now offset='45 minutes'}}",
+            "heartbeatInterval": -1.0
+          }
+        },
+        {
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 501,
+              "responseMessage": "SUSPENDED_GRANT"
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "heartbeat-body-transformer",
+      "response-template"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/cbsd-domain-coordinator-app/services/config/sasDomainProxy_registrationRequestUserId"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"sasDomainProxy_registrationRequestUserId\":\"default_userId\"}",
+    "fixedDelayMilliseconds": 200
+  }
+}

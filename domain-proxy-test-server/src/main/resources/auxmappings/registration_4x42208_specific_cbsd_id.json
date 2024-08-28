@@ -1,0 +1,40 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/registration",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ClearCacheParameter": {
+        "cache": "cbsdId"
+      },
+      "ResponseFillerParameter": [
+        {
+          "identifier": "TK2712051500001",
+          "fieldAndValue": {
+            "cbsdId": "test2208/device1"
+          }
+        },
+        {
+          "identifier": "TK3T42882000001",
+          "fieldAndValue": {
+            "cbsdId": "test2208/device2"
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "registration-body-transformer",
+      "response-template"
+    ]
+  }
+}

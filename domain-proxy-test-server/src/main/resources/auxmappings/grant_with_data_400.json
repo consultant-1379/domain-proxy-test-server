@@ -1,0 +1,310 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/v1.2/grant",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "identifier": "\"lowFrequency\":3550000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3550000000,
+                "highFrequency": 3560000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3550000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3560000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3560000000,
+                "highFrequency": 3570000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3560000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3570000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3570000000,
+                "highFrequency": 3580000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3570000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3580000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3580000000,
+                "highFrequency": 3590000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3580000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3590000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3590000000,
+                "highFrequency": 3600000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3590000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3600000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3600000000,
+                "highFrequency": 3610000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3600000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3610000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3610000000,
+                "highFrequency": 3620000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3610000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3620000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3620000000,
+                "highFrequency": 3630000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3620000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3630000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3630000000,
+                "highFrequency": 3640000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3630000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3640000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3640000000,
+                "highFrequency": 3650000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3640000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3650000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3650000000,
+                "highFrequency": 3660000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3650000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3660000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3660000000,
+                "highFrequency": 3670000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3660000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3670000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3670000000,
+                "highFrequency": 3680000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3670000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3680000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3680000000,
+                "highFrequency": 3690000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3680000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3690000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "operationFrequencyRange": {
+                "lowFrequency": 3690000000,
+                "highFrequency": 3700000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "\"lowFrequency\":3690000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "response-template",
+      "grant-body-transformer"
+    ]
+  }
+}

@@ -1,0 +1,625 @@
+{
+  "id": "16c34fb3-a602-4824-9ac2-21397591980b",
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/grant",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3550000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3550000000,
+                "highFrequency": 3560000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3550000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3560000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3560000000,
+                "highFrequency": 3570000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3560000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3570000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3570000000,
+                "highFrequency": 3580000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3570000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3580000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3580000000,
+                "highFrequency": 3590000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3580000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3590000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 15,
+              "operationFrequencyRange": {
+                "lowFrequency": 3590000000,
+                "highFrequency": 3600000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3590000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3600000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 15,
+              "operationFrequencyRange": {
+                "lowFrequency": 3600000000,
+                "highFrequency": 3610000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3600000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3610000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 15,
+              "operationFrequencyRange": {
+                "lowFrequency": 3610000000,
+                "highFrequency": 3620000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3610000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3620000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 15,
+              "operationFrequencyRange": {
+                "lowFrequency": 3620000000,
+                "highFrequency": 3630000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3620000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3630000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3630000000,
+                "highFrequency": 3640000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3630000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3640000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3640000000,
+                "highFrequency": 3650000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3640000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3650000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3650000000,
+                "highFrequency": 3660000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3650000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3660000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3660000000,
+                "highFrequency": 3670000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3660000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3670000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3670000000,
+                "highFrequency": 3680000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3670000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3680000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3680000000,
+                "highFrequency": 3690000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3680000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device1\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3690000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 30,
+              "operationFrequencyRange": {
+                "lowFrequency": 3690000000,
+                "highFrequency": 3700000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3690000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3550000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3550000000,
+                "highFrequency": 3560000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3550000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3560000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3560000000,
+                "highFrequency": 3570000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3560000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3570000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3570000000,
+                "highFrequency": 3580000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3570000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3580000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3580000000,
+                "highFrequency": 3590000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3580000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3590000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3590000000,
+                "highFrequency": 3600000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3590000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3600000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3600000000,
+                "highFrequency": 3610000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3600000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3610000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 20,
+              "operationFrequencyRange": {
+                "lowFrequency": 3610000000,
+                "highFrequency": 3620000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3610000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3620000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 20,
+              "operationFrequencyRange": {
+                "lowFrequency": 3620000000,
+                "highFrequency": 3630000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3620000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3630000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3630000000,
+                "highFrequency": 3640000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3630000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3640000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3640000000,
+                "highFrequency": 3650000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3640000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3650000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3650000000,
+                "highFrequency": 3660000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3650000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3660000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3660000000,
+                "highFrequency": 3670000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3660000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3670000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3670000000,
+                "highFrequency": 3680000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3670000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3680000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3680000000,
+                "highFrequency": 3690000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3680000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        },
+        {
+          "identifier": "test2208/device2\",\"operationParam\":{\"maxEirp\":36.98970004336019,\"operationFrequencyRange\":{\"lowFrequency\":3690000000",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 25,
+              "operationFrequencyRange": {
+                "lowFrequency": 3690000000,
+                "highFrequency": 3700000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "3690000000",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 400
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "grant-body-transformer"
+    ]
+  }
+}

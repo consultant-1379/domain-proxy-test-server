@@ -1,0 +1,304 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>akka-lab</groupId>
+	<artifactId>akka-lab</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<akka.framework.version>2.5.25</akka.framework.version>
+		<akka.persistence.mock.version>1.1.1</akka.persistence.mock.version>
+		<typesafe.config.version>1.3.1</typesafe.config.version>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+		<maven.jar.version>2.2</maven.jar.version>
+
+		<junit.version>4.12</junit.version>
+		<assertj.core.version>3.3.0</assertj.core.version>
+		<mockito.version>1.10.19</mockito.version>
+		<slf4j.api.version>1.7.22</slf4j.api.version>
+		<logback.version>1.2.1</logback.version>
+		<jcl.over.slf4j.version>1.7.22</jcl.over.slf4j.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- AKKA -->
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-actor_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-cluster_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-cluster-metrics_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-remote_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-cluster-tools_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-multi-node-testkit_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-testkit_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-slf4j_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-persistence_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-cluster-sharding_2.13</artifactId>
+				<version>${akka.framework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe</groupId>
+				<artifactId>config</artifactId>
+				<version>${typesafe.config.version}</version>
+			</dependency>
+
+			<!-- For testing in memory persistence storage -->
+			<dependency>
+				<groupId>org.dmonix.akka</groupId>
+				<artifactId>akka-persistence-mock_2.11</artifactId>
+				<version>${akka.persistence.mock.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.iq80.leveldb</groupId>
+				<artifactId>leveldb</artifactId>
+				<version>0.7</version>
+			</dependency>
+
+			<!-- Testing -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>${mockito.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- SLF4J -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.api.version}</version>
+			</dependency>
+			<!-- LogBack dependencies -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${jcl.over.slf4j.version}</version>
+			</dependency>
+
+			<!-- Maven -->
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven.jar.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- AKKA -->
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-actor_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-cluster_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-cluster-metrics_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-remote_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-cluster-tools_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-multi-node-testkit_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-testkit_2.13</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-slf4j_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-persistence_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-cluster-sharding_2.13</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.typesafe</groupId>
+			<artifactId>config</artifactId>
+		</dependency>
+
+		<!-- For testing in memory persistence storage -->
+		<dependency>
+			<groupId>org.dmonix.akka</groupId>
+			<artifactId>akka-persistence-mock_2.11</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.iq80.leveldb</groupId>
+			<artifactId>leveldb</artifactId>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- SLF4J -->
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<!-- LogBack dependencies -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<includes>
+						<include>**/*.class</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.19.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<includes>
+						<include>**/*.class</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+	<modules>
+		<module>akka-actors</module>
+		<module>thread-safety</module>
+		<module>actor-hierachies</module>
+		<module>actor-hierarchies-step2</module>
+		<module>actor-supervision</module>
+		<module>actor-changing-behaviour</module>
+		<module>actor-persistence</module>
+		<module>actor-fsm</module>
+	</modules>
+
+
+</project>

@@ -1,0 +1,31 @@
+# Project
+
+# Compiled source #
+*.class
+*/bin/*
+
+# JGiven Reports #
+*jgiven-reports*
+
+# Eclipse files
+.project
+.classpath
+.settings
+.metadata
+
+# IntelliJ
+.idea
+*.iws
+*.ipr
+*.iml
+
+# Maven build files
+target
+reports
+avs-rest-service/application.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+

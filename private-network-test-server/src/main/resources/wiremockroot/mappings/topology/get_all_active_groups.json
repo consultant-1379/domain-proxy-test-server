@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/cbsd-domain-coordinator-app/services/topology-operator/groups/all"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"activeGroups\":[{\"groupId\":\"LTE40dg2ERBS00004:LTE40dg2ERBS00004-1,LTE40dg2ERBS00004-2,LTE40dg2ERBS00004-3\"},{\"groupId\":\"LTE40dg2ERBS00002:LTE40dg2ERBS00002-1,LTE40dg2ERBS00002-2,LTE40dg2ERBS00002-3\"},{\"groupId\":\"LTE40dg2ERBS00003:LTE40dg2ERBS00003-1,LTE40dg2ERBS00003-2,LTE40dg2ERBS00003-3\"}]}",
+    "fixedDelayMilliseconds": 200
+  }
+}

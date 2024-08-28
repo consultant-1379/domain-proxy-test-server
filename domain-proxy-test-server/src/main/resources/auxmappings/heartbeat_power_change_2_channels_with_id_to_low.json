@@ -1,0 +1,85 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/heartbeat",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "identifier": "sas1/testidone",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 7.5,
+              "operationFrequencyRange": {
+                "lowFrequency": 3550000000,
+                "highFrequency": 35600000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "sas1/testidone",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 500
+            }
+          }
+        },
+        {
+          "identifier": "sas1/testidtwo",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 8.99,
+              "operationFrequencyRange": {
+                "lowFrequency": 3560000000,
+                "highFrequency": 3570000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "sas1/testidtwo",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 501
+            }
+          }
+        },
+        {
+          "identifier": "sas1/id3570",
+          "fieldAndValue": {
+            "operationParam": {
+              "maxEirp": 8.99,
+              "operationFrequencyRange": {
+                "lowFrequency": 3570000000,
+                "highFrequency": 3580000000
+              }
+            }
+          }
+        },
+        {
+          "identifier": "sas1/id3570",
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 501
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "heartbeat-body-transformer",
+      "response-template"
+    ]
+  }
+}

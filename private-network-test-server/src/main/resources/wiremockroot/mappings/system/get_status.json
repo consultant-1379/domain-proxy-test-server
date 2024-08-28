@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/cbsd-domain-coordinator-app/services/system/status"
+  },
+  "response": {
+    "status": 200,
+    "body": "STARTED",
+    "fixedDelayMilliseconds": 200
+  }
+}

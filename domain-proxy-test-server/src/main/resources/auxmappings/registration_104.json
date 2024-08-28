@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1.2/registration",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformerParameters": {
+      "ResponseFillerParameter": [
+        {
+          "fieldAndValue": {
+            "measReportConfig": ["RECEIVED_POWER_WITHOUT_GRANT"]
+          }
+        },
+        {
+          "fieldAndValue": {
+            "response": {
+              "responseCode": 104,
+              "responseMessage": "response Message 104",
+              "responseData": [ "response Data 104-0", "response Data 104-1" ]
+            }
+          }
+        }
+      ]
+    },
+    "transformers": [
+      "registration-body-transformer"
+    ]
+  }
+}

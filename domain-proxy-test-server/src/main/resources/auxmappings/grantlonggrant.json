@@ -1,0 +1,29 @@
+{
+   "id" : "29b0341d-f2e8-4f2f-95b4-b1009ea63bf1",
+   "request": {
+      "method": "POST",
+      "urlPath": "/v1.2/grant",
+      "headers": {
+         "Content-Type": {
+            "equalTo": "application/json"
+         }
+      }
+   },
+   "response": {
+      "status": 201,
+      "headers": {
+         "Content-Type": "application/json"
+      },
+      "transformerParameters": {
+         "ResponseFillerParameter": {
+            "fieldAndValue": {
+               "grantExpireTime": "{{now offset='20000 minutes'}}"
+            }
+         }
+      },
+      "transformers": [
+         "response-template",
+         "grant-body-transformer"
+      ]
+   }
+}
